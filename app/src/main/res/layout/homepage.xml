@@ -284,17 +284,17 @@
         android:layout_height="96dp"
         android:background="@drawable/rounded_card"
         android:padding="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.592"
-        app:layout_constraintMarginEnd="16dp"
-        app:layout_constraintMarginStart="16dp"
-        app:layout_constraintMarginTop="24dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.165">
 
-        <!-- Greeting Text -->
+    <!-- Greeting Text -->
 
         <TextView
             android:id="@+id/greeting_text"

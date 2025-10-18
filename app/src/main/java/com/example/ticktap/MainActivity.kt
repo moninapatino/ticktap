@@ -11,7 +11,6 @@ class MainActivity : ComponentActivity() {
         setContentView(R.layout.welcome_page)
 
         val getStartedButton = findViewById<Button>(R.id.getstarted_button)
-        val registerButton = findViewById<Button>(R.id.register_button)
 
         // Navigate to SignUpPage
         getStartedButton.setOnClickListener {
