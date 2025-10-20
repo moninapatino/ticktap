@@ -9,13 +9,15 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.welcome_page)
+
         val getStartedButton = findViewById<Button>(R.id.getstarted_button)
 
-        // set a click listener
+        // Navigate to SignUpPage
         getStartedButton.setOnClickListener {
-            // when clicked, go to SignupActivity
             val intent = Intent(this, SignUpPage::class.java)
             startActivity(intent)
         }
+
+
     }
 }
