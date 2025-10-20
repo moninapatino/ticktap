@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/footer_border"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <!-- Home -->
+        <ImageView
+            android:id="@+id/home_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Home"
+            android:src="@drawable/home_logo"
+            app:layout_constraintBottom_toTopOf="@id/home_text"
+            app:layout_constraintEnd_toStartOf="@id/notes_icon"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/home_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Home"
+            android:textColor="#702963"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/home_icon"
+            app:layout_constraintStart_toStartOf="@id/home_icon"
+            app:layout_constraintTop_toBottomOf="@id/home_icon" />
+
+        <!-- Notes -->
+        <ImageView
+            android:id="@+id/notes_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Notes"
+            android:src="@drawable/notes_logo"
+            app:layout_constraintBottom_toTopOf="@id/notes_text"
+            app:layout_constraintEnd_toStartOf="@id/add_icon"
+            app:layout_constraintStart_toEndOf="@id/home_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/notes_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Notes"
+            android:textColor="#702963"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/notes_icon"
+            app:layout_constraintStart_toStartOf="@id/notes_icon"
+            app:layout_constraintTop_toBottomOf="@id/notes_icon" />
+
+        <!-- Add (Center Floating Button) -->
+        <ImageView
+            android:id="@+id/add_icon"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:background="@drawable/circle_button"
+            android:clickable="true"
+            android:contentDescription="Add"
+            android:src="@drawable/add_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/calendar_icon"
+            app:layout_constraintStart_toEndOf="@id/notes_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Calendar -->
+        <ImageView
+            android:id="@+id/calendar_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Calendar"
+            android:src="@drawable/calendar_logo"
+            app:layout_constraintBottom_toTopOf="@id/calendar_text"
+            app:layout_constraintEnd_toStartOf="@id/settings_icon"
+            app:layout_constraintStart_toEndOf="@id/add_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/calendar_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Deadlines"
+            android:textColor="#702963"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/calendar_icon"
+            app:layout_constraintStart_toStartOf="@id/calendar_icon"
+            app:layout_constraintTop_toBottomOf="@id/calendar_icon" />
+
+        <!-- Settings -->
+        <ImageView
+            android:id="@+id/settings_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:contentDescription="Settings"
+            android:src="@drawable/settings_logo"
+            app:layout_constraintBottom_toTopOf="@id/settings_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/calendar_icon"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/settings_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Settings"
+            android:textColor="#702963"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/settings_icon"
+            app:layout_constraintStart_toStartOf="@id/settings_icon"
+            app:layout_constraintTop_toBottomOf="@id/settings_icon" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
