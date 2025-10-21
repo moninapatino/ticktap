@@ -16,6 +16,7 @@ public class NotesPage extends ComponentActivity {
         // Find UI elements
         ImageView homeIcon = findViewById(R.id.home_icon);
         Button addNotesButton = findViewById(R.id.add_notes_button);
+        ImageView settingsIcon = findViewById(R.id.settings_icon);
 
         // Home icon click listener - go back to Dashboard
         homeIcon.setOnClickListener(view -> {
@@ -26,6 +27,12 @@ public class NotesPage extends ComponentActivity {
         // Add Notes button click listener - go to Add Note page
         addNotesButton.setOnClickListener(view -> {
             Intent intent = new Intent(NotesPage.this, AddNotePage.class);
+            startActivity(intent);
+        });
+
+        // Settings icon click listener - go to SettingsPage
+        settingsIcon.setOnClickListener(view -> {
+            Intent intent = new Intent(NotesPage.this, SettingsPage.class);
             startActivity(intent);
         });
     }

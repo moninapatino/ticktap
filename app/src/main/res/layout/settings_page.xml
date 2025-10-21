@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"> <!-- Main phone frame to light grey -->
+    android:background="#F5F5F5">
 
-    <!-- Status Bar Icons (Fixed at Top) -->
     <ImageView
         android:id="@+id/imageView4"
         android:layout_width="16dp"
@@ -58,7 +57,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03" />
 
-    <!-- Footer Layout (Fixed at Bottom) -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/footer_layout"
         android:layout_width="match_parent"
@@ -68,7 +66,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <!-- Home -->
         <ImageView
             android:id="@+id/home_icon"
             android:layout_width="30dp"
@@ -94,7 +91,6 @@
             app:layout_constraintStart_toStartOf="@id/home_icon"
             app:layout_constraintTop_toBottomOf="@id/home_icon" />
 
-        <!-- Notes -->
         <ImageView
             android:id="@+id/notes_icon"
             android:layout_width="30dp"
@@ -119,7 +115,6 @@
             app:layout_constraintStart_toStartOf="@id/notes_icon"
             app:layout_constraintTop_toBottomOf="@id/notes_icon" />
 
-        <!-- Add (Center Floating Button) -->
         <ImageView
             android:id="@+id/add_icon"
             android:layout_width="65dp"
@@ -133,7 +128,6 @@
             app:layout_constraintStart_toEndOf="@id/notes_icon"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Calendar -->
         <ImageView
             android:id="@+id/calendar_icon"
             android:layout_width="30dp"
@@ -158,7 +152,6 @@
             app:layout_constraintStart_toStartOf="@id/calendar_icon"
             app:layout_constraintTop_toBottomOf="@id/calendar_icon" />
 
-        <!-- Settings -->
         <ImageView
             android:id="@+id/settings_icon"
             android:layout_width="30dp"
@@ -184,7 +177,6 @@
             app:layout_constraintTop_toBottomOf="@id/settings_icon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <!-- Scrollable Content Area: Constrained between top status bar and fixed footer -->
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -192,13 +184,12 @@
         app:layout_constraintTop_toBottomOf="@id/textView2"
         app:layout_constraintBottom_toTopOf="@id/footer_layout">
 
-        <!-- Inner LinearLayout to stack the title and the cards vertically -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingTop="16dp"
-            android:paddingBottom="24dp"> <!-- Padding below the last card for spacing -->
+            android:paddingBottom="24dp">
 
             <TextView
                 android:id="@+id/appname_text2"
@@ -211,7 +202,6 @@
                 android:textColor="#702963"
                 android:textSize="28sp" />
 
-            <!-- Main Content Card (tasks_card_container) - NOW DYNAMIC HEIGHT -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/tasks_card_container"
                 android:layout_width="358dp"
@@ -225,9 +215,6 @@
                 android:paddingEnd="16dp"
                 android:paddingBottom="16dp">
 
-                <!-- All children are now constrained relative to each other (top-down) -->
-
-                <!-- 1. Notifications Header -->
                 <ImageView
                     android:id="@+id/imageView9"
                     android:layout_width="21dp"
@@ -249,7 +236,6 @@
                     app:layout_constraintTop_toTopOf="@id/imageView9"
                     app:layout_constraintBottom_toBottomOf="@id/imageView9" />
 
-                <!-- 2. Description 1 -->
                 <TextView
                     android:id="@+id/textView10"
                     android:layout_width="0dp"
@@ -261,7 +247,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- 3. Enable notifications label & switch -->
                 <TextView
                     android:id="@+id/textView11"
                     android:layout_width="0dp"
@@ -281,7 +266,6 @@
                     app:layout_constraintTop_toTopOf="@id/textView11"
                     app:layout_constraintBottom_toBottomOf="@id/textView11" />
 
-                <!-- 4. Description 2 -->
                 <TextView
                     android:id="@+id/textView12"
                     android:layout_width="0dp"
@@ -292,7 +276,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- 5. Grant permission (Interactive Button Area) -->
                 <ImageView
                     android:id="@+id/imageView18"
                     android:layout_width="201dp"
@@ -316,7 +299,6 @@
                     app:layout_constraintEnd_toEndOf="@id/imageView18"
                     android:layout_marginStart="16dp" />
 
-                <!-- 6. Divider Line -->
                 <View
                     android:id="@+id/view3"
                     android:layout_width="match_parent"
@@ -327,7 +309,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- 7. Daily Summary Header -->
                 <TextView
                     android:id="@+id/textView14"
                     android:layout_width="wrap_content"
@@ -338,7 +319,6 @@
                     app:layout_constraintTop_toBottomOf="@id/view3"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <!-- 8. Description 3 -->
                 <TextView
                     android:id="@+id/textView16"
                     android:layout_width="0dp"
@@ -349,7 +329,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 
-                <!-- 9. Time Picker Area (Outline and Value) -->
                 <ImageView
                     android:id="@+id/imageView16"
                     android:layout_width="201dp"
@@ -382,7 +361,6 @@
                     app:layout_constraintStart_toEndOf="@id/imageView10"
                     app:layout_constraintEnd_toEndOf="@id/imageView16" />
 
-                <!-- 10. Snooze Duration Header -->
                 <TextView
                     android:id="@+id/textView17"
                     android:layout_width="wrap_content"
@@ -393,7 +371,6 @@
                     app:layout_constraintTop_toBottomOf="@id/imageView16"
                     app:layout_constraintStart_toStartOf="parent" />
 
-                <!-- 11. Snooze Value Area (Outline and Value) -->
                 <ImageView
                     android:id="@+id/imageView15"
                     android:layout_width="175dp"
@@ -439,7 +416,6 @@
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <!-- New: Appearance Card Section -->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/appearance_card_container"
                 android:layout_width="358dp"
@@ -453,7 +429,6 @@
                 android:paddingTop="16dp"
                 android:paddingEnd="16dp"
                 android:paddingBottom="16dp">
-
 
                 <TextView
                     android:id="@+id/appearance_title"
@@ -481,8 +456,6 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/appearance_title" />
 
-                <!-- Placeholder content for Appearance settings -->
-
                 <TextView
                     android:id="@+id/appearance_desc2"
                     android:layout_width="0dp"
@@ -501,7 +474,7 @@
                     android:layout_width="277dp"
                     android:layout_height="17dp"
                     android:layout_marginTop="20dp"
-                    android:text="Dark Mode"
+                    android:text="Dark mode"
                     android:textColor="#333333"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
@@ -524,67 +497,77 @@
                     android:id="@+id/imageView20"
                     android:layout_width="130dp"
                     android:layout_height="35dp"
+                    android:backgroundTint="@null"
                     android:src="@drawable/rounded_textfield"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.122"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.635" />
-
-                <ImageView
-                    android:id="@+id/imageView21"
-                    android:layout_width="130dp"
-                    android:layout_height="34dp"
-                    android:src="@drawable/rounded_textfield"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.852"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.629" />
-
-                <TextView
-                    android:id="@+id/textView21"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="dark"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.778"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.595" />
+                    app:layout_constraintVertical_bias="0.637"
+                    app:tint="#AAAAAA" />
 
                 <TextView
                     android:id="@+id/textView22"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="light"
-                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="Light"
+                    android:textColor="#333333"
+                    app:layout_constraintBottom_toBottomOf="@id/imageView20"
                     app:layout_constraintEnd_toEndOf="@+id/imageView20"
                     app:layout_constraintHorizontal_bias="0.689"
                     app:layout_constraintStart_toStartOf="@+id/imageView20"
+                    app:layout_constraintTop_toTopOf="@id/imageView20" />
+
+                <ImageView
+                    android:id="@+id/imageView25"
+                    android:layout_width="134dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/rounded_card"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.859"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.595" />
+                    app:layout_constraintVertical_bias="0.642" />
 
                 <ImageView
-                    android:id="@+id/imageView22"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/light_mode_icon"
-                    tools:layout_editor_absoluteX="23dp"
-                    tools:layout_editor_absoluteY="144dp" />
-
-                <ImageView
-                    android:id="@+id/imageView23"
+                    android:id="@+id/imageView26"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:src="@drawable/dark_mode_icon"
                     app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.639"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.641"
-                    tools:layout_editor_absoluteX="196dp" />
+                    app:layout_constraintVertical_bias="0.632" />
+
+                <TextView
+                    android:id="@+id/textView21"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dark"
+                    android:textColor="#FFFFFF"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.791"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.627" />
+
+                <ImageView
+                    android:id="@+id/imageView27"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/light_mode_icon"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.165"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.632" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
