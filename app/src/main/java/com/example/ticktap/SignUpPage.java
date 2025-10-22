@@ -6,6 +6,7 @@ import android.widget.Button;
 import androidx.activity.ComponentActivity;
 import com.example.ticktap.LoginPage;
 
+
 public class SignUpPage extends ComponentActivity {
 
     @Override
