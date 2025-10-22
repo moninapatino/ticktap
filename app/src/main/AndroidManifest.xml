@@ -31,6 +31,9 @@
         <activity android:name=".NotesPage" />
         <activity android:name=".AddNotePage" />
         <activity android:name=".AddTaskPage" />
+        <activity android:name=".SettingsPage" />
+        <activity android:name=".ProfilePage" />
+      <!--  <activity android:name=".CalendarPage" /> -->
 
         <meta-data
             android:name="preloaded_fonts"
