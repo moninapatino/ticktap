@@ -22,6 +22,7 @@
             android:id="@+id/search_icon"
             android:layout_width="24dp"
             android:layout_height="24dp"
+            android:tint="#702963"
             android:src="@drawable/search_icon"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
